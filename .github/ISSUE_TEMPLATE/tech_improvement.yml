@@ -1,0 +1,63 @@
+# Technical Improvement Template
+name: 技術的改善
+description: インフラ改善やパフォーマンス最適化用テンプレート
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        このテンプレートは小規模な技術的改善のために使用してください。
+        大規模な改修が必要な場合は、Notionのプロダクトバックログに記載してください。
+
+  - type: dropdown
+    id: improvement-type
+    attributes:
+      label: 改善タイプ
+      description: 改善の種類を選択してください
+      options:
+        - インフラ改善
+        - パフォーマンス最適化
+        - セキュリティ対応
+        - 依存パッケージの更新
+        - その他
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-situation
+    attributes:
+      label: 現状
+      description: 現在の状況や課題
+      placeholder: "例: ページの読み込みに3秒以上かかっている"
+    validations:
+      required: true
+
+  - type: textarea
+    id: improvement-details
+    attributes:
+      label: 改善内容
+      description: 具体的な改善内容
+      placeholder: "例: 画像の最適化による読み込み時間の短縮"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-impact
+    attributes:
+      label: 期待される効果
+      description: 改善による具体的な効果
+      placeholder: "例: ページ読み込み時間を1秒以下に短縮"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact-level
+    attributes:
+      label: 影響度
+      description: 改善による影響の大きさを選択してください
+      options:
+        - Low（局所的な改善）
+        - Medium（複数機能への影響あり）
+        - High（システム全体への影響あり）
+    validations:
+      required: true
